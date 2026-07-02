@@ -1,2 +1,26 @@
 # csci1300_project
 CSCI1300 final project by Kevin Tompkins
+
+## Theme
+
+(TBA)
+
+## Goal
+
+(TBA)
+
+## How to compile and run
+
+(TBA)
+
+## How to play
+
+(TBA)
+
+## Classes
+
+(TBA — list each class and what it does)
+
+## Extra credit
+
+(TBA — or write "None")
