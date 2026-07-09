@@ -1,27 +1,44 @@
-#ifndef CHARACTER_H
-#define CHARACTER_H
+#ifndef GAME_H
+#define GAME_H
 
-#include "Villager.h"
 #include <string>
-#include<vector>
+#include <vector>
+
+#include "Character.h"
+#include "Player.h"
+
 using namespace std;
 
 class Game {
-    private:
-vector<Villager> villagers;
-Farmer player;
-bool gameOver;
+private:
+    Player player;
+    vector<Character> characters;
+    vector<string> locations;
+    vector<string> bundleNeeds;
+    vector<string> donatedItems;
+    int jojaInfluence;
+    bool gameOver;
+    bool won;
+
+    void setupGame();
+    void displayDashboard();
+    void displayMap();
+    void displayBundle();
+    void displayMenu();
+    void movePlayer();
+    void searchLocation();
+    void talkToCharacter();
+    void visitCommunityCenter();
+    void visitJojaMart();
+    void endDay();
+    bool bundleComplete();
+    bool alreadyDonated(string itemName);
+    void displayEnding();
 
 public:
-Game();
-Game(vector<Villager> v, Farmer p, boolgO);
-
-void loadCharacteristics();
-void disolayMenu();
-int procedssChoice(int c);
-void handleRun();
-void run();
-
+    Game();
+    Game(string playerName);
+    void run();
 };
 
 #endif

@@ -2,6 +2,7 @@
 #define CHARACTER_H
 
 #include <string>
+#include "Character.h"
 using namespace std;
 
 Character::Character() {
@@ -12,7 +13,5 @@ Character::Character() {
     string getLocation();
     void setName();
     void setLocation();
-
-};
 
 #endif

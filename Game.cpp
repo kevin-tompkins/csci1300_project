@@ -45,5 +45,3 @@ void run(){
         processChoice(input);
     }
 }
-
-};
