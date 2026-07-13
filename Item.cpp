@@ -1,35 +1,39 @@
 #include "Item.h"
 
+#include <iostream>
+
+using namespace std;
+
 Item::Item() {
-    itemName = "";
-    itemType = "";
-    itemValue = 0;
-    inBundle = false;
+    name = "None";
+    type = "None";
+    value = 0;
+    bundleItem = false;
 }
 
-Item::Item(string n, string t, int v, bool b) {
-    itemName = n;
-    itemType = t;
-    itemValue = v;
-    inBundle = b;
+Item::Item(string itemName, string itemType, int itemValue, bool neededForBundle) {
+    name = itemName;
+    type = itemType;
+    value = itemValue;
+    bundleItem = neededForBundle;
 }
 
 string Item::getName() {
-    return itemName;
+    return name;
 }
 
 string Item::getType() {
-    return itemType;
+    return type;
 }
 
 int Item::getValue() {
-    return itemValue;
+    return value;
 }
 
 bool Item::isBundleItem() {
-    return inBundle;
+    return bundleItem;
+}
 
 void Item::displayItem() {
-    cout << "Item name: " << itemName << endl << "Item type: " << itemType << endl << "Item value: " << itemValue << endl << "In bundle: " << inBundle << endl;
-}
+    cout << name << " - " << type << " (" << value << "g)";
 }

@@ -25,6 +25,7 @@ private:
     void displayMap();
     void displayBundle();
     void displayMenu();
+    int getNumberChoice();
     void movePlayer();
     void searchLocation();
     void talkToCharacter();

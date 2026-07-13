@@ -1,17 +1,43 @@
-#ifndef CHARACTER_H
-#define CHARACTER_H
-
-#include <string>
 #include "Character.h"
+
+#include <iostream>
+
 using namespace std;
 
 Character::Character() {
-    name = "Default";
-    location = "Farm";
+    name = "Unknown";
+    location = "Town";
+    dialogue = "Hello.";
+    reward = Item();
+    rewardGiven = true;
 }
-    string getName();
-    string getLocation();
-    void setName();
-    void setLocation();
 
-#endif
+Character::Character(string characterName, string characterLocation, string characterDialogue, Item rewardItem) {
+    name = characterName;
+    location = characterLocation;
+    dialogue = characterDialogue;
+    reward = rewardItem;
+    rewardGiven = false;
+}
+
+string Character::getName() {
+    return name;
+}
+
+string Character::getLocation() {
+    return location;
+}
+
+bool Character::hasRewardLeft() {
+    return !rewardGiven;
+}
+
+Item Character::giveReward() {
+    rewardGiven = true;
+    return reward;
+}
+
+void Character::talk() {
+    cout << name << " says:" << endl;
+    cout << "\"" << dialogue << "\"" << endl;
+}

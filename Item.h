@@ -7,14 +7,14 @@ using namespace std;
 
 class Item {
 private:
-    string itemName;
-    string itemType;
-    int itemValue;
-    bool inBundle;
+    string name;
+    string type;
+    int value;
+    bool bundleItem;
 
 public:
     Item();
-    Item(string itemName, string itemType, int itemValue, bool inBundle);
+    Item(string itemName, string itemType, int itemValue, bool neededForBundle);
 
     string getName();
     string getType();
