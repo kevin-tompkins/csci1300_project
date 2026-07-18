@@ -13,11 +13,12 @@ private:
     string location;
     string dialogue;
     Item reward;
+    bool hasReward;
     bool rewardGiven;
 
 public:
     Character();
-    Character(string characterName, string characterLocation, string characterDialogue, Item rewardItem);
+    Character(string characterName, string characterLocation, string characterDialogue, Item rewardItem, bool hasReward);
 
     string getName();
     string getLocation();

@@ -41,6 +41,11 @@ public:
     void restoreEnergy();
     void nextDay();
     void displayInventory();
+    void setDay(int newDay);
+    void setEnergy(int newEnergy);
+    void setMoney(int newMoney);
+    Item getInventoryItem(int index);
+    void clearInventory();
 };
 
 #endif

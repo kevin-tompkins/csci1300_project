@@ -3,7 +3,7 @@
 #include <iostream>
 
 using namespace std;
-
+// Set the default variable values for character
 Character::Character() {
     name = "Unknown";
     location = "Town";
@@ -11,13 +11,13 @@ Character::Character() {
     reward = Item();
     rewardGiven = true;
 }
-
-Character::Character(string characterName, string characterLocation, string characterDialogue, Item rewardItem) {
+// Constructor for a character so you can create a character with the given inputs as variable values
+Character::Character(string characterName, string characterLocation, string characterDialogue, Item rewardItem, bool hasReward) {
     name = characterName;
     location = characterLocation;
     dialogue = characterDialogue;
     reward = rewardItem;
-    rewardGiven = false;
+    rewardGiven = !hasReward;
 }
 
 string Character::getName() {
@@ -36,7 +36,7 @@ Item Character::giveReward() {
     rewardGiven = true;
     return reward;
 }
-
+// Prints double quotes around the dialogue variable.
 void Character::talk() {
     cout << name << " says:" << endl;
     cout << "\"" << dialogue << "\"" << endl;

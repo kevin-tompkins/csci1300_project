@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <fstream>
 
 #include "Character.h"
 #include "Player.h"
@@ -23,6 +24,7 @@ private:
     void setupGame();
     void displayDashboard();
     void displayMap();
+    void displayCharacterNear();
     void displayBundle();
     void displayMenu();
     int getNumberChoice();
@@ -35,6 +37,9 @@ private:
     bool bundleComplete();
     bool alreadyDonated(string itemName);
     void displayEnding();
+    void saveGame();
+    void loadGame();
+    Item loadItemFromName(string itemName);
 
 public:
     Game();
